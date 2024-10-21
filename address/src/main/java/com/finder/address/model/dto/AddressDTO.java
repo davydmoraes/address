@@ -1,28 +1,23 @@
-package com.finder.address.model;
+package com.finder.address.model.dto;
 
-import jakarta.validation.constraints.NotEmpty;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.time.LocalDateTime;
-@Document(collection = "address_logs")
-public class AddressLog {
-    @Id
-    @NotEmpty
-    private String id;
+public class AddressDTO {
     private String zipCode;
     private String street;
     private String neighborhood;
+    private String complement;
     private String city;
     private String state;
-    private LocalDateTime consultedAt;
 
-    public String getId() {
-        return id;
+    public AddressDTO() {
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public AddressDTO(String zipCode, String street, String neighborhood, String complement, String city, String state) {
+        this.zipCode = zipCode;
+        this.street = street;
+        this.neighborhood = neighborhood;
+        this.complement = complement;
+        this.city = city;
+        this.state = state;
     }
 
     public String getZipCode() {
@@ -49,6 +44,14 @@ public class AddressLog {
         this.neighborhood = neighborhood;
     }
 
+    public String getComplement() {
+        return complement;
+    }
+
+    public void setComplement(String complement) {
+        this.complement = complement;
+    }
+
     public String getCity() {
         return city;
     }
@@ -63,13 +66,5 @@ public class AddressLog {
 
     public void setState(String state) {
         this.state = state;
-    }
-
-    public LocalDateTime getConsultedAt() {
-        return consultedAt;
-    }
-
-    public void setConsultedAt(LocalDateTime consultedAt) {
-        this.consultedAt = consultedAt;
     }
 }

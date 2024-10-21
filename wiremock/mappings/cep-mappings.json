@@ -3,77 +3,89 @@
     {
       "request": {
         "method": "GET",
-        "urlPathPattern": "/api/mock/cep/20040-002"
+        "urlPathPattern": "/api/mock/zipcode/20040-002"
       },
       "response": {
         "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
         "jsonBody": {
-          "cep": "20040-002",
-          "logradouro": "Praça dos Três Poderes",
-          "bairro": "Centro",
-          "cidade": "Rio de Janeiro",
-          "estado": "RJ"
+          "zipCode": "20040-002",
+          "street": "Praça dos Três Poderes",
+          "neighborhood": "Centro",
+          "city": "Rio de Janeiro",
+          "state": "RJ"
         }
       }
     },
     {
       "request": {
         "method": "GET",
-        "urlPathPattern": "/api/mock/cep/30190-002"
+        "urlPathPattern": "/api/mock/zipcode/30190-002"
       },
       "response": {
         "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
         "jsonBody": {
-          "cep": "30190-002",
-          "logradouro": "Avenida Afonso Pena",
-          "bairro": "Centro",
-          "cidade": "Belo Horizonte",
-          "estado": "MG"
+          "zipCode": "30190-002",
+          "street": "Avenida Afonso Pena",
+          "neighborhood": "Centro",
+          "city": "Belo Horizonte",
+          "state": "MG"
         }
       }
     },
     {
       "request": {
         "method": "GET",
-        "urlPathPattern": "/api/mock/cep/01000-000"
+        "urlPathPattern": "/api/mock/zipcode/01000-000"
       },
       "response": {
         "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
         "jsonBody": {
-          "cep": "01000-000",
-          "logradouro": "Praça da Sé",
-          "bairro": "Sé",
-          "cidade": "São Paulo",
-          "estado": "SP"
+          "zipCode": "01000-000",
+          "street": "Praça da Sé",
+          "neighborhood": "Sé",
+          "city": "São Paulo",
+          "state": "SP"
         }
       }
     },
     {
       "request": {
         "method": "GET",
-        "urlPathPattern": "/api/mock/cep/80010-000"
+        "urlPathPattern": "/api/mock/zipcode/80010-000"
       },
       "response": {
         "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
         "jsonBody": {
-          "cep": "80010-000",
-          "logradouro": "Rua XV de Novembro",
-          "bairro": "Centro",
-          "complemento": "Sala 100",
-          "cidade": "Curitiba",
-          "estado": "PR"
+          "zipCode": "80010-000",
+          "street": "Rua XV de Novembro",
+          "neighborhood": "Centro",
+          "complement": "Room 100",
+          "city": "Curitiba",
+          "state": "PR"
         }
       }
     },
     {
       "request": {
         "method": "GET",
-        "urlPathPattern": "/api/mock/cep/99999-999"
+        "urlPathPattern": "/api/mock/zipcode/99999-999"
       },
       "response": {
         "status": 404,
         "jsonBody": {
-          "error": "CEP não encontrado"
+          "error": "ZIP code not found"
         }
       }
     }

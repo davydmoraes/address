@@ -1,22 +1,22 @@
 package com.finder.address.controller;
 
-import com.finder.address.model.AddressLog;
-import com.finder.address.service.CepService;
+import com.finder.address.model.dto.AddressDTO;
+import com.finder.address.service.ZipCodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/cep")
-public class CepController {
+@RequestMapping("/api/zipcode")
+public class ZipCodeController {
 
     @Autowired
-    private CepService cepService;
+    private ZipCodeService zipcodeService;
 
-    @GetMapping("/{cep}")
-    public ResponseEntity<AddressLog> buscarCep(@PathVariable String cep) {
+    @GetMapping("/{zipcode}")
+    public ResponseEntity<AddressDTO> buscarZipCode(@PathVariable String zipcode) {
         try {
-            AddressLog addressLog = cepService.findAddressByCep(cep);
+            AddressDTO addressLog = zipcodeService.findAddressByZipCode(zipcode);
 
             return ResponseEntity.ok(addressLog);
         } catch (Exception e) {
