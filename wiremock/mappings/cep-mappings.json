@@ -1,0 +1,81 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "urlPathPattern": "/api/mock/cep/20040-002"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "cep": "20040-002",
+          "logradouro": "Praça dos Três Poderes",
+          "bairro": "Centro",
+          "cidade": "Rio de Janeiro",
+          "estado": "RJ"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPathPattern": "/api/mock/cep/30190-002"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "cep": "30190-002",
+          "logradouro": "Avenida Afonso Pena",
+          "bairro": "Centro",
+          "cidade": "Belo Horizonte",
+          "estado": "MG"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPathPattern": "/api/mock/cep/01000-000"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "cep": "01000-000",
+          "logradouro": "Praça da Sé",
+          "bairro": "Sé",
+          "cidade": "São Paulo",
+          "estado": "SP"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPathPattern": "/api/mock/cep/80010-000"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "cep": "80010-000",
+          "logradouro": "Rua XV de Novembro",
+          "bairro": "Centro",
+          "complemento": "Sala 100",
+          "cidade": "Curitiba",
+          "estado": "PR"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPathPattern": "/api/mock/cep/99999-999"
+      },
+      "response": {
+        "status": 404,
+        "jsonBody": {
+          "error": "CEP não encontrado"
+        }
+      }
+    }
+  ]
+}
